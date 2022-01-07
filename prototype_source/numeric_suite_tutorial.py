@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-PyTorch Numeric Suite Tutorial
+PyTorch Numeric Suite 튜토리얼
 ==============================
 
 Introduction
 ------------
 
-Quantization is good when it works, but it’s difficult to know what's wrong when it doesn't satisfy the accuracy we expect. Debugging the accuracy issue of quantization is not easy and time consuming.
+양자화는 잘 될 때는 도움이 되는 기법이지만, 예상한 수준의 정확도가 나오지 않을 때는 어느 부분에 문제가 생긴 것인지 알기 어렵습니다. 양자화에서 정확도과 관련된 문제를 디버깅하는 것은 어려울 뿐더러 시간도 많이 드는 작업입니다.
 
-One important step of debugging is to measure the statistics of the float model and its corresponding quantized model to know where are they differ most. We built a suite of numeric tools called PyTorch Numeric Suite in PyTorch quantization to enable the measurement of the statistics between quantized module and float module to support quantization debugging efforts. Even for the quantized model with good accuracy, PyTorch Numeric Suite can still be used as the profiling tool to better understand the quantization error within the model and provide the guidance for further optimization.
+디버깅에서 중요한 단계 중 하나는 부동소수점 실수를 사용하는 모델과 양자화 모델을 통계적을 분석하여 어느 부분에서 가장 큰 차이가 발생하는지를 찾아보는 것입니다. PyTorch 양자화에서는 PyTorch Numeric Suite라 불리는 수치해석 툴을 제공하고 있습니다. 이 툴을 이용하면 float 모듈과 양자화된 모듈의 통계 분석을 수행할 수 있으며, 이를 통해 양자화 디버깅을 쉽게 수행할 수 있습니다. 높은 정확도를 보이는 양자화된 모델에 대해서도 PyTorch Numeric Suite를 프로파일링 툴로써 사용할 수 있으며, 이를 통해 모델 내부의 양자화 오차를 좀 더 잘 이해하여 추가적인 최적화에 대한 실마리를 잡을 수 있을 것입니다.
 
 PyTorch Numeric Suite currently supports models quantized through both static quantization and dynamic quantization with unified APIs.
 
